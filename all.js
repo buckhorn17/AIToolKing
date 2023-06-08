@@ -17,19 +17,5 @@ $(document).ready(function () {
     $('.udrt').click(function(){
       $("html,body").animate({scrollTop: 0},500)
       })
-
-
-      // $('.card').hover(function(){
-      //   $("img").addClass('imgBig');
-        
-      //   })
-
-
-    // $('.deco').ready(function(){
-    //   $("img").animate({top:'200px'});
-
-    // })
-
-
-      
+     
 });
