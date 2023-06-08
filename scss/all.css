@@ -300,7 +300,7 @@ body {
   width: 160px;
 }
 .container .partners .message .card {
-  background: rgba(255, 255, 255, 0.031372549);
+  background: rgba(255, 255, 255, 0.0784313725);
   border-radius: 16px;
   width: 32.5%;
   padding: 40px;
@@ -367,6 +367,11 @@ body {
   border-radius: 16px;
   text-align: center;
 }
+.container .aiToolKing .aiTool-title .filterAll select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .container .aiToolKing .aiTool-title .tagAll .tag {
   color: #919191;
   background: white;
@@ -393,18 +398,17 @@ body {
   color: #020202;
 }
 .container .aiToolKing .aiTool .card {
-  max-width: 416px;
+  width: 32.5%;
   border-radius: 16px;
   border: 1px solid #F2F2F2;
   overflow: hidden;
   margin-bottom: 24px;
 }
 .container .aiToolKing .aiTool .card .image {
-  height: 312px;
   overflow: hidden;
 }
 .container .aiToolKing .aiTool .card .image img {
-  max-width: 100%;
+  width: 100%;
 }
 .container .aiToolKing .aiTool .card .info {
   height: 118px;
@@ -656,18 +660,30 @@ body {
   .container .header .logo {
     max-width: 147px;
   }
-  .container .header-title .home-header-title-h1 {
+  .container .header-title .home-header-title-h1,
+  .container .header-title .pricing-header-title-h1 {
     font-size: 48px;
     width: 82%;
   }
   .container .header-title a {
     margin-bottom: 180px;
   }
-  .container .header-title .home-decoAll {
+  .container .header-title .home-decoAll,
+  .container .header-title .pricing-decoAll {
     justify-content: center;
   }
-  .container .header-title .home-decoAll .deco {
+  .container .header-title .home-decoAll .deco,
+  .container .header-title .pricing-decoAll .deco {
     width: 33%;
+  }
+  .container .header-title .pricing-header-title-h1 {
+    margin-bottom: 64px;
+  }
+  .container .header-title .pricing-header-title-h2 {
+    font-size: 28px;
+    margin-bottom: 258px;
+    width: 75%;
+    align-self: flex-end;
   }
   .container .service {
     margin-bottom: 120px;
@@ -730,50 +746,127 @@ body {
   .container .partners .message .card:nth-child(1)::after {
     content: "";
     position: absolute;
-    border-radius: 50%;
-    background: #FFFFFF;
-    width: 12px;
-    height: 12px;
+    margin: auto;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    transform: translateX(-18px);
+    background: url(../image/Frame\ 43.png) no-repeat;
+    width: 52px;
+    height: 20px;
+    transform: translateY(24px);
   }
-  .container .partners .message .card:nth-child(2)::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: #525252;
-    width: 8px;
-    height: 8px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(-2px);
+  .container .partners .message .card:nth-child(2) {
+    display: none;
   }
-  .container .partners .message .card:nth-child(3)::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: #525252;
-    width: 8px;
-    height: 8px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translate(16px, -2px);
+  .container .partners .message .card:nth-child(3) {
+    display: none;
+  }
+  .container .pricing {
+    margin-bottom: 120px;
+  }
+  .container .pricing .pricing-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .container .pricing .pricing-item .item {
+    width: 100%;
+  }
+  .container .pricing .pricing-item .item .item-title {
+    padding: 20px 20px 0px;
+  }
+  .container .pricing .pricing-item .item .item-wrap {
+    padding: 0px 20px 20px;
+    height: 106px;
+  }
+  .container .pricing .pricing-item .item .price {
+    padding: 20px;
+  }
+  .container .pricing .pricing-item .item:last-child {
+    margin-bottom: 0px;
+  }
+  .container .terms {
+    display: block;
+    margin-bottom: 120px;
+  }
+  .container .terms .terms-title {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .container .terms .terms-wrap {
+    width: 100%;
+  }
+  .container .terms .terms-wrap .terms-content {
+    margin-bottom: 24px;
+  }
+  .container .terms .terms-wrap .terms-content h2 {
+    font-size: 40px;
+  }
+  .container .terms .terms-wrap .terms-content p {
+    font-size: 16px;
+    line-height: 150%;
   }
   .container .aiToolKing {
     border-radius: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+  }
+  .container .aiToolKing .aiTool-title h2 {
+    font-size: 32px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  .container .aiToolKing .filterAll {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .container .aiToolKing .filterAll .filter {
+    order: 0;
+  }
+  .container .aiToolKing .filterAll .tagAll {
+    order: 2;
+    display: flex;
+    flex: 0 0 650px;
+    margin-top: 16px;
+  }
+  .container .aiToolKing .filterAll .newToOld {
+    order: 1;
+  }
+  .container .aiToolKing .aiTool {
+    margin: 0px auto 8px;
+  }
+  .container .aiToolKing .aiTool .card {
+    width: 100%;
+  }
+  .container .aiToolKing .aiTool .card .info {
+    height: 139px;
+  }
+  .container .aiToolKing .pageAll li:last-child a {
+    padding: 14px 8px;
+  }
+  .container .aiToolKing .pageAll li a {
+    padding: 14px 22px;
   }
   .container .slogan {
     padding: 120px 25px;
   }
   .container .slogan h2 {
     font-size: 32px;
+  }
+  .container .faq {
+    margin-top: 80px;
+    display: block;
+  }
+  .container .faq .faq-title {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .container .faq .faq-wrap {
+    width: 100%;
+    margin-bottom: 120px;
   }
   .container .footer .above {
     flex-direction: column-reverse;
