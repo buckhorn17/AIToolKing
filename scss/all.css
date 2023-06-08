@@ -288,6 +288,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 80px;
+  overflow: hidden;
 }
 .container .partners .logoAll .logoFirs {
   display: flex;
@@ -617,6 +618,12 @@ body {
   .container .wrap {
     max-width: 92.5%;
   }
+  .container .header {
+    padding: 28px 0px;
+  }
+  .container .header .logo {
+    max-width: 147px;
+  }
   .container .header .menu {
     display: none;
     flex-direction: column;
@@ -651,14 +658,6 @@ body {
   .container .footer .under .udrt {
     right: 12px;
     transform: translateY(-32px);
-  }
-}
-@media (max-width: 375px) {
-  .container .header {
-    padding: 28px 0px;
-  }
-  .container .header .logo {
-    max-width: 147px;
   }
   .container .header-title .home-header-title-h1,
   .container .header-title .pricing-header-title-h1 {
@@ -838,7 +837,7 @@ body {
     margin: 0px auto 8px;
   }
   .container .aiToolKing .aiTool .card {
-    width: 100%;
+    width: 48%;
   }
   .container .aiToolKing .aiTool .card .info {
     height: 139px;
@@ -880,5 +879,16 @@ body {
   }
   .container .footer .under .udlt .copyright {
     margin-bottom: 48px;
+  }
+}
+@media (max-width: 375px) {
+  .container .aiToolKing .aiTool {
+    margin: 0px auto 8px;
+  }
+  .container .aiToolKing .aiTool .card {
+    width: 100%;
+  }
+  .container .aiToolKing .aiTool .card .info {
+    height: 139px;
   }
 }
