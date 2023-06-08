@@ -177,6 +177,7 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 80px;
+            overflow: hidden;
 
             .logoFirs {
                 display: flex;
@@ -328,15 +329,6 @@
                     img {
                         width: 100%;
                     }
-
-                    // .imgBig{
-                    //     transform:scale(1.2);
-                    //     transition: 0.2s; //改變時間
-                    // }
-                    // .imgBig2{
-                    //     transform:scale(1);
-                    //     transition: 0.2s; //改變時間
-                    // }
                 }
 
                 .info {
@@ -617,6 +609,12 @@
         }
 
         .header {
+            padding: 28px 0px;
+
+            .logo {
+                max-width: 147px;
+            }
+
             .menu {
                 display: none;
                 flex-direction: column;
@@ -667,20 +665,9 @@
         }
 
     }
-}
 
-
-
-@media (max-width:375px) {
 
     .container {
-        .header {
-            padding: 28px 0px;
-
-            .logo {
-                max-width: 147px;
-            }
-        }
 
         .header-title {
 
@@ -913,7 +900,7 @@
                 margin: 0px auto 8px;
 
                 .card {
-                    width: 100%;
+                    width: 48%;
 
                     .info {
                         height: 139px;
@@ -982,6 +969,32 @@
                     }
                 }
             }
+        }
+
+    }
+
+
+}
+
+
+
+@media (max-width:375px) {
+
+    .container {
+        .aiToolKing {
+
+            .aiTool {
+                margin: 0px auto 8px;
+
+                .card {
+                    width: 100%;
+
+                    .info {
+                        height: 139px;
+                    }
+                }
+            }
+
         }
 
     }
